@@ -12,7 +12,6 @@ const VideoDetail = () => {
 
   const [videoDetail, setVideoDetail] = useState(null);
   const [videos, setVideos] = useState([]);
-
   useEffect(() => {
     fetchFromAPI(`videos?part=snippet,statistics&id=${id}`).then((data) =>
       setVideoDetail(data?.items[0])
